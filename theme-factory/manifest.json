@@ -1,0 +1,34 @@
+{
+  "name": "theme-factory",
+  "label": "Theme Factory",
+  "description": "Ten professional color-and-font themes, plus on-the-fly theme generation, for styling slides, documents, reports, and landing pages.",
+  "version": "1.0.0",
+  "category": "skill",
+  "author": "Anthropic",
+  "author_url": "https://github.com/anthropics/skills",
+  "license": "Apache-2.0",
+  "tags": [
+    "design",
+    "themes",
+    "slides",
+    "documents"
+  ],
+  "upstream": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "9d2f1ae187231d8199c64b5b762e1bdf2244733d",
+    "path": "skills/theme-factory"
+  },
+  "server": {
+    "runtime": "none",
+    "transport": "none"
+  },
+  "skills": [
+    {
+      "id": "theme-factory",
+      "loading": "on_demand",
+      "file": "skills/theme-factory/SKILL.md",
+      "description": "Toolkit for styling artifacts with a professional theme: 10 pre-set color/font themes plus on-the-fly theme generation. Use when styling slides, docs, reports, or HTML pages and a cohesive look is wanted.",
+      "default_exclude_from": []
+    }
+  ]
+}

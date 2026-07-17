@@ -1,0 +1,33 @@
+{
+  "name": "security-threat-model",
+  "label": "Security Threat Model",
+  "description": "Repository-grounded threat modeling — trust boundaries, assets, attacker capabilities, abuse paths, and mitigations — written up as a concise Markdown threat model.",
+  "version": "1.0.0",
+  "category": "skill",
+  "author": "OpenAI",
+  "author_url": "https://github.com/openai/skills",
+  "license": "Apache-2.0",
+  "tags": [
+    "security",
+    "threat-modeling",
+    "appsec"
+  ],
+  "upstream": {
+    "repo": "https://github.com/openai/skills",
+    "commit": "49f948faa9258a0c61caceaf225e179651397431",
+    "path": "skills/.curated/security-threat-model"
+  },
+  "server": {
+    "runtime": "none",
+    "transport": "none"
+  },
+  "skills": [
+    {
+      "id": "security-threat-model",
+      "loading": "on_demand",
+      "file": "skills/security-threat-model/SKILL.md",
+      "description": "Repository-grounded AppSec threat modeling: enumerate trust boundaries, assets, attacker capabilities, abuse paths, mitigations; produce a concise Markdown threat model. Use when explicitly asked to threat model a codebase or path.",
+      "default_exclude_from": []
+    }
+  ]
+}

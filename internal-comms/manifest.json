@@ -1,0 +1,33 @@
+{
+  "name": "internal-comms",
+  "label": "Internal Comms",
+  "description": "Formats and worked examples for internal communications: status reports, leadership updates, 3P updates, newsletters, FAQs, and incident reports.",
+  "version": "1.0.0",
+  "category": "skill",
+  "author": "Anthropic",
+  "author_url": "https://github.com/anthropics/skills",
+  "license": "Apache-2.0",
+  "tags": [
+    "writing",
+    "communications",
+    "reports"
+  ],
+  "upstream": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "9d2f1ae187231d8199c64b5b762e1bdf2244733d",
+    "path": "skills/internal-comms"
+  },
+  "server": {
+    "runtime": "none",
+    "transport": "none"
+  },
+  "skills": [
+    {
+      "id": "internal-comms",
+      "loading": "on_demand",
+      "file": "skills/internal-comms/SKILL.md",
+      "description": "Formats and examples for writing internal communications: status reports, leadership updates, 3P (progress/plans/problems) updates, company newsletters, FAQs, incident reports. Use whenever asked to write internal comms.",
+      "default_exclude_from": []
+    }
+  ]
+}

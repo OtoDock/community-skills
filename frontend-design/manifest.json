@@ -1,0 +1,34 @@
+{
+  "name": "frontend-design",
+  "label": "Frontend Design",
+  "description": "Distinctive, intentional visual design guidance for building or reshaping web UIs — aesthetic direction, typography, palette, and layout choices that don't read as templated defaults.",
+  "version": "1.0.0",
+  "category": "skill",
+  "author": "Anthropic",
+  "author_url": "https://github.com/anthropics/skills",
+  "license": "Apache-2.0",
+  "tags": [
+    "design",
+    "ui",
+    "css",
+    "typography"
+  ],
+  "upstream": {
+    "repo": "https://github.com/anthropics/skills",
+    "commit": "9d2f1ae187231d8199c64b5b762e1bdf2244733d",
+    "path": "skills/frontend-design"
+  },
+  "server": {
+    "runtime": "none",
+    "transport": "none"
+  },
+  "skills": [
+    {
+      "id": "frontend-design",
+      "loading": "on_demand",
+      "file": "skills/frontend-design/SKILL.md",
+      "description": "Visual design guidance for building new UI or reshaping an existing one: aesthetic direction, typography, palette, layout. Use when a page, artifact, or app needs a deliberate, non-templated look.",
+      "default_exclude_from": []
+    }
+  ]
+}

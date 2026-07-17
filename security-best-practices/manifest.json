@@ -1,0 +1,33 @@
+{
+  "name": "security-best-practices",
+  "label": "Security Best Practices",
+  "description": "Language- and framework-specific security best-practice reviews and secure-by-default coding guidance for Python, JavaScript/TypeScript, and Go.",
+  "version": "1.0.0",
+  "category": "skill",
+  "author": "OpenAI",
+  "author_url": "https://github.com/openai/skills",
+  "license": "Apache-2.0",
+  "tags": [
+    "security",
+    "review",
+    "code"
+  ],
+  "upstream": {
+    "repo": "https://github.com/openai/skills",
+    "commit": "49f948faa9258a0c61caceaf225e179651397431",
+    "path": "skills/.curated/security-best-practices"
+  },
+  "server": {
+    "runtime": "none",
+    "transport": "none"
+  },
+  "skills": [
+    {
+      "id": "security-best-practices",
+      "loading": "on_demand",
+      "file": "skills/security-best-practices/SKILL.md",
+      "description": "Language/framework-specific security best-practice reviews and secure-by-default coding guidance (Python, JavaScript/TypeScript, Go). Use when explicitly asked for a security review, security report, or secure coding help.",
+      "default_exclude_from": []
+    }
+  ]
+}
