@@ -2,7 +2,7 @@
   "name": "algorithmic-art",
   "label": "Algorithmic Art",
   "description": "Generative art with p5.js — seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "skill",
   "author": "Anthropic",
   "author_url": "https://github.com/anthropics/skills",

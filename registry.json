@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-07-17T00:09:45Z",
+  "updated_at": "2026-07-26T19:30:00Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -8,7 +8,7 @@
       "label": "Algorithmic Art",
       "description": "Generative art with p5.js — seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
       "category": "skill",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
@@ -31,7 +31,7 @@
       "requires_system_packages": [],
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
-      "size_bytes": 62250,
+      "size_bytes": 62514,
       "deprecated": false,
       "patched": false,
       "patch_note": null
