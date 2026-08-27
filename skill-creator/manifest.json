@@ -2,7 +2,7 @@
   "name": "skill-creator",
   "label": "Skill Creator",
   "description": "Create new Agent Skills, improve existing ones, and measure skill performance with evals and benchmarks. Use to author a skill from scratch, optimize its description for triggering, or A/B compare versions.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "skill",
   "author": "Anthropic",
   "author_url": "https://github.com/anthropics/skills",

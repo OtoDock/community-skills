@@ -483,3 +483,15 @@ Repeating one more time the core loop here for emphasis:
 Please add steps to your TodoList, if you have such a thing, to make sure you don't forget. If you're in Cowork, please specifically put "Create evals JSON and run `eval-viewer/generate_review.py` so human can review test cases" in your TodoList to make sure it happens.
 
 Good luck!
+
+## OtoDock platform note
+
+(OtoDock addition — not in the upstream skill.) On the OtoDock platform,
+finished skills are installed platform-wide rather than into a personal
+config dir: zip the skill FOLDER (SKILL.md at its root; a plain `.zip`,
+not `.skill`) and an admin installs it from Admin → Skills → "Install
+from Zip" — or ask your admin to. Once installed, managers enable it per
+agent in Agent Settings → Skills, and agents can request it via the
+mcps-mcp `request_skill_install` tool. The description-optimization loop
+(`claude -p`) works in Claude-engine sessions here; in Codex-engine
+sessions skip it, as in the Claude.ai guidance above.

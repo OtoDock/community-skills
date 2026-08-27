@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-08-27T05:01:31Z",
+  "updated_at": "2026-08-27T17:57:13Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -211,7 +211,7 @@
       "label": "Skill Creator",
       "description": "Create new Agent Skills, improve existing ones, and measure skill performance with evals and benchmarks. Use to author a skill from scratch, optimize its description for triggering, or A/B compare versions.",
       "category": "skill",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
@@ -235,7 +235,7 @@
       "has_scripts": true,
       "platform_min_version": "1.5.0",
       "assignment_mode": "auto",
-      "size_bytes": 227785,
+      "size_bytes": 228555,
       "deprecated": false,
       "patched": false,
       "patch_note": null

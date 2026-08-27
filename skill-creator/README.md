@@ -30,4 +30,5 @@ One skill, loaded `on_demand`:
 Vendored from [anthropics/skills](https://github.com/anthropics/skills) at commit
 [`3b3fad9`](https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/skill-creator), path `skills/skill-creator`. © Anthropic,
 licensed under Apache-2.0 — see `skills/skill-creator/LICENSE.txt`.
-Modifications: none.
+Modifications: appended an "OtoDock platform note" section to SKILL.md
+(the install/enable flow on OtoDock; plain .zip packaging).
