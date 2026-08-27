@@ -20,6 +20,6 @@ One skill, loaded `on_demand`:
 ## Source & license
 
 Vendored from [anthropics/skills](https://github.com/anthropics/skills) at commit
-[`9d2f1ae`](https://github.com/anthropics/skills/tree/9d2f1ae187231d8199c64b5b762e1bdf2244733d/skills/algorithmic-art), path `skills/algorithmic-art`. © Anthropic,
+[`3b3fad9`](https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/algorithmic-art), path `skills/algorithmic-art`. © Anthropic,
 licensed under Apache-2.0 — see `skills/algorithmic-art/LICENSE.txt`.
 Modifications: none.

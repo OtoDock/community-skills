@@ -277,7 +277,7 @@ The `templates/viewer.html` file is the foundation. It contains the exact struct
 <html>
 <head>
   <!-- p5.js from CDN - always available -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
   <style>
     /* All styling inline - clean, minimal */
     /* Canvas on top, controls below */

@@ -15,7 +15,8 @@
   "upstream": {
     "repo": "https://github.com/openai/skills",
     "commit": "49f948faa9258a0c61caceaf225e179651397431",
-    "path": "skills/.curated/security-best-practices"
+    "path": "skills/.curated/security-best-practices",
+    "frozen": true
   },
   "server": {
     "runtime": "none",

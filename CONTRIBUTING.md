@@ -85,13 +85,20 @@ Hard rules (enforced by `generate-registry.py` and again by the platform):
 - Bump `version` on any content change; `registry.json` carries a manifest
   hash so installs re-converge automatically.
 
-## Content policy (v1)
+## Content policy (v2 — 2026-08-27)
 
-- **No `scripts/` directories, no executable payloads.** Skill scripts would
-  run as trusted code — unsandboxed on remote machines. Until a review gate
-  exists, the catalog carries instruction + reference content only.
-  Inert assets (markdown, templates a skill quotes from, fonts, PDFs) are
-  fine.
+- **Executable `scripts/` content is allowed, and reviewed hard.** Skill
+  scripts run through the agent's normal shell tool under the platform's
+  permission tiers — they add no capability the agent lacks, but they ARE
+  third-party code every installing platform trusts, so review is the
+  security boundary. A script-bearing PR must have: pinned dependencies (or
+  stdlib only), no download-and-execute patterns, no credential or token
+  access, no network calls beyond what the skill's purpose obviously
+  requires, and a README note saying what the scripts do. The registry
+  flags these packages (`has_scripts`) and platforms surface a
+  "bundles scripts" badge; they require platform ≥ 1.5.0 (older installers
+  reject them). Inert assets (markdown, templates, fonts, PDFs) remain
+  unrestricted.
 - **No `.env` files, keys, or credentials** anywhere in a package.
 - **Frontmatter is declarative only.** `SKILL.md` frontmatter is scrubbed at
   install to `name`, `description`, `license`, `compatibility`, `metadata` —
@@ -109,6 +116,22 @@ MIT, …). Pin the exact upstream commit in `manifest.json` `upstream`, keep
 the upstream `LICENSE.txt` inside the skill folder, and record source +
 commit + modifications in the package README. Keep modifications minimal and
 list every one.
+
+Refreshing pins is a one-command, reviewed operation:
+
+```
+python scripts/refresh-upstreams.py --check          # report drift vs upstream HEAD
+python scripts/refresh-upstreams.py --apply [PKG…]   # stage content + bump versions
+```
+
+`upstream.exclude` lists upstream paths never vendored;
+`upstream.frozen: true` marks a dead/deprecated upstream the tool must skip
+(e.g. openai/skills, deprecated upstream 2026 — our two OpenAI packages are
+frozen at their vendored content). After `--apply`: review the diff,
+re-check the upstream LICENSE, update the README provenance note, commit.
+The platform deliberately never auto-pulls from upstreams — this review IS
+the boundary; published catalog bumps then reach installs via the weekly
+auto-update.
 
 ## PR review checklist
 

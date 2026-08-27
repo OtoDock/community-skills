@@ -145,15 +145,17 @@ def _validate(manifest: dict, pkg_dir: Path) -> None:
 
     if any(p.is_file() for p in pkg_dir.rglob(".env")):
         raise SystemExit(f"{pkg_dir.name}: package must not contain .env files")
-    # v1 catalog content policy — no executable payloads in community skills
-    # (skill scripts run as trusted code, unsandboxed on satellites).
-    for sub in pkg_dir.rglob("scripts"):
-        if sub.is_dir() and any(sub.iterdir()):
-            raise SystemExit(
-                f"{pkg_dir.name}: must not bundle scripts/ "
-                f"({sub.relative_to(pkg_dir)}) — v1 catalog policy")
     if not (pkg_dir / "README.md").is_file():
         raise SystemExit(f"{pkg_dir.name}: README.md missing")
+
+
+def _has_scripts(pkg_dir: Path) -> bool:
+    """Executable content (any non-empty ``scripts/`` dir) is ALLOWED since
+    2026-08-27 (platform 1.5) and surfaced as a per-entry ``has_scripts``
+    badge — review script-bearing contributions extra carefully (pinned
+    deps, no fetch-and-exec, no credential access; see CONTRIBUTING.md)."""
+    return any(sub.is_dir() and any(sub.iterdir())
+               for sub in pkg_dir.rglob("scripts"))
 
 
 def _directory_size(path: Path) -> int:
@@ -181,6 +183,18 @@ def _entry_for_package(pkg_dir: Path) -> dict:
     manifest = _read_manifest(pkg_dir / "manifest.json")
     _validate(manifest, pkg_dir)
     has_icon = (pkg_dir / "icon.png").is_file()
+    has_scripts = _has_scripts(pkg_dir)
+    # Scripts-bearing packages need a platform that accepts them (the pre-1.5
+    # installer rejected non-empty scripts/) — force the floor so older
+    # platforms show "incompatible" instead of a failing install.
+    def _ver(v: str) -> tuple:
+        try:
+            return tuple(int(x) for x in str(v).split("."))
+        except ValueError:
+            return (0,)
+    min_version = manifest.get("platform_min_version", PLATFORM_MIN_VERSION)
+    if has_scripts and _ver(min_version) < (1, 5, 0):
+        min_version = "1.5.0"
     return {
         "name": manifest["name"],
         "label": manifest["label"],
@@ -203,8 +217,8 @@ def _entry_for_package(pkg_dir: Path) -> dict:
         "license": manifest.get("license", "Apache-2.0"),
         "requires_credentials": False,
         "requires_system_packages": [],
-        "platform_min_version": manifest.get("platform_min_version",
-                                             PLATFORM_MIN_VERSION),
+        "has_scripts": has_scripts,
+        "platform_min_version": min_version,
         "assignment_mode": manifest.get("assignment_mode", "auto"),
         "size_bytes": _directory_size(pkg_dir),
         "deprecated": bool(manifest.get("deprecated", False)),
