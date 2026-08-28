@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-08-27T17:57:13Z",
+  "updated_at": "2026-08-28T01:26:43Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -202,40 +202,6 @@
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
       "size_bytes": 33401,
-      "deprecated": false,
-      "patched": false,
-      "patch_note": null
-    },
-    {
-      "name": "skill-creator",
-      "label": "Skill Creator",
-      "description": "Create new Agent Skills, improve existing ones, and measure skill performance with evals and benchmarks. Use to author a skill from scratch, optimize its description for triggering, or A/B compare versions.",
-      "category": "skill",
-      "version": "1.0.2",
-      "runtime": "none",
-      "source": "",
-      "version_constraint": "",
-      "manifest_hash": "09d781d66b6d439a",
-      "manifest_url": "./skill-creator/manifest.json",
-      "readme_url": "./skill-creator/README.md",
-      "icon_url": null,
-      "tags": [
-        "authoring",
-        "creator",
-        "evals",
-        "meta",
-        "skill",
-        "skills"
-      ],
-      "author": "Anthropic",
-      "author_url": "https://github.com/anthropics/skills",
-      "license": "Apache-2.0",
-      "requires_credentials": false,
-      "requires_system_packages": [],
-      "has_scripts": true,
-      "platform_min_version": "1.5.0",
-      "assignment_mode": "auto",
-      "size_bytes": 228555,
       "deprecated": false,
       "patched": false,
       "patch_note": null
