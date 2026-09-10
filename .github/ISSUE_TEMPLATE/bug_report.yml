@@ -1,0 +1,56 @@
+name: Bug report
+description: A skill package from this catalog fails to install, or its instructions lead an agent astray.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A security problem goes through
+        [private vulnerability reporting](https://github.com/OtoDock/community-skills/security/advisories/new),
+        never an issue. A bug in the platform itself (the proxy, the dashboard, a
+        remote machine) belongs in [OtoDock/oto-dock](https://github.com/OtoDock/oto-dock/issues/new/choose),
+        and a question in its [Discussions](https://github.com/OtoDock/oto-dock/discussions/categories/q-a).
+  - type: input
+    id: entry
+    attributes:
+      label: Skill package
+      description: The catalog name and version, as Admin → Skills → Browse Community Skills shows them or as `registry.json` lists them.
+      placeholder: "frontend-design 1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: platform_version
+    attributes:
+      label: OtoDock version
+      description: "`/health` on the proxy returns it as `version`; it is the `OTODOCK_VERSION` pinned in your `docker-compose.yml`."
+      placeholder: "1.6.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine
+      description: The agent engine that loaded the skill, when it matters.
+      options:
+        - Claude Code
+        - Codex
+        - Both, or not engine-specific
+        - Not sure
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: >-
+        What you did, what you expected, what happened instead. For a wrong
+        instruction, quote the part of `SKILL.md` and what the agent did with it.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: >-
+        `docker compose logs otodock-proxy` around the moment, when the install
+        or the load failed. Remove tokens, keys and anything personal before
+        pasting.
+      render: text

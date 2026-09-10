@@ -42,15 +42,17 @@ Curated from the official Anthropic and OpenAI skills repositories — vendored
 at a pinned upstream commit, each package's README records the exact source,
 commit, license, and any modifications.
 
-| Package | From | What it teaches |
-|---|---|---|
-| `frontend-design` | Anthropic | Distinctive, non-templated visual design for web UIs |
-| `theme-factory` | Anthropic | 10 professional themes (+ on-the-fly generation) for slides/docs/pages |
-| `algorithmic-art` | Anthropic | Generative art with p5.js — flow fields, particles, seeded randomness |
-| `internal-comms` | Anthropic | House formats for status reports, 3P updates, newsletters, incident reports |
-| `claude-api` | Anthropic | Building on the Claude API/SDKs — models, pricing, streaming, tools, MCP |
-| `security-best-practices` | OpenAI | Language/framework-specific security reviews (Python, JS/TS, Go) |
-| `security-threat-model` | OpenAI | Repository-grounded AppSec threat modeling |
+<!-- catalog:start -->
+| Package | Version | From | What it teaches |
+|---------|---------|------|-----------------|
+| [algorithmic-art](./algorithmic-art/) | 1.0.2 | [Anthropic](https://github.com/anthropics/skills) | Generative art with p5.js — seeded randomness, flow fields, particle systems, and interactive parameter… |
+| [claude-api](./claude-api/) | 1.0.1 | [Anthropic](https://github.com/anthropics/skills) | Comprehensive reference for building on the Claude API and Anthropic SDKs — model ids, pricing, streaming,… |
+| [frontend-design](./frontend-design/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Distinctive, intentional visual design guidance for building or reshaping web UIs — aesthetic direction,… |
+| [internal-comms](./internal-comms/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Formats and worked examples for internal communications: status reports, leadership updates, 3P updates,… |
+| [security-best-practices](./security-best-practices/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Language- and framework-specific security best-practice reviews and secure-by-default coding guidance for… |
+| [security-threat-model](./security-threat-model/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Repository-grounded threat modeling — trust boundaries, assets, attacker capabilities, abuse paths, and… |
+| [theme-factory](./theme-factory/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Ten professional color-and-font themes, plus on-the-fly theme generation, for styling slides, documents,… |
+<!-- catalog:end -->
 
 ## Content policy (v1)
 

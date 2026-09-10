@@ -1,0 +1,36 @@
+name: New skill or improvement
+description: Propose a skill package for the catalog, or a change to one that is already in it.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vendoring or writing it yourself? `CONTRIBUTING.md` has the folder
+        layout, the manifest reference and the content policy, and a pull
+        request is welcome without an issue first.
+  - type: input
+    id: entry
+    attributes:
+      label: Skill package
+      description: The catalog name of an existing package, or a link to the upstream source for a new one.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it should teach
+      description: The technique, when an agent should reach for it, and the tasks a user would ask for.
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Licence of the source
+      description: For vendored content, the upstream licence (it must permit redistribution).
+      placeholder: "Apache-2.0"
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to contribute it (CONTRIBUTING.md).
