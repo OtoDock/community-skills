@@ -1,5 +1,13 @@
 name: Validate catalog
 
+# The catalog's own contract, on every push and pull request: registry.json
+# matches the packages, and every skill's front matter passes the schema the
+# platform installs against (mcps/skill.schema.json of OtoDock/oto-dock,
+# fetched at the latest release and checked against its sha256: its id names
+# the release, so the two values move together after every publish, and the
+# platform's release gate reports a pin that lags). This file lives in the
+# PREP repo and is synced to the public catalog by dev/publish-catalog.sh.
+
 on:
   push:
     branches: [main]
@@ -7,6 +15,10 @@ on:
 
 permissions:
   contents: read
+
+env:
+  SCHEMA_URL: https://raw.githubusercontent.com/OtoDock/oto-dock/v2.0.0/mcps/skill.schema.json
+  SCHEMA_SHA256: 27db73ea0472c0694807884f39933569a433509754e0dada7985a39c65dcc705
 
 jobs:
   check:
@@ -20,3 +32,36 @@ jobs:
           python-version: "3.12"
       - name: Validate packages + registry freshness
         run: python scripts/generate-registry.py --check
+      - name: The platform's skill schema
+        run: |
+          curl -fsSLo "$RUNNER_TEMP/skill.schema.json" "$SCHEMA_URL"
+          echo "$SCHEMA_SHA256  $RUNNER_TEMP/skill.schema.json" | sha256sum -c -
+          echo "OTODOCK_SKILL_SCHEMA=$RUNNER_TEMP/skill.schema.json" >> "$GITHUB_ENV"
+      - name: Every skill's front matter follows the schema
+        run: |
+          python3 -m pip install -q "jsonschema==4.26.0" "PyYAML==6.0.3"
+          python3 - <<'PY'
+          import json, os, pathlib, sys
+          import yaml
+          from jsonschema import Draft202012Validator
+          schema = json.loads(pathlib.Path(os.environ["OTODOCK_SKILL_SCHEMA"]).read_text(encoding="utf-8"))
+          validator = Draft202012Validator(schema)
+          bad = 0
+          files = sorted(p for p in pathlib.Path(".").rglob("SKILL.md") if ".git" not in p.parts and "node_modules" not in p.parts)
+          for path in files:
+              text = path.read_text(encoding="utf-8")
+              if not text.startswith("---\n") or "\n---" not in text[4:]:
+                  print(f"{path}: no front matter"); bad += 1; continue
+              fm = text[4:].split("\n---", 1)[0]
+              try:
+                  data = yaml.safe_load(fm)
+              except yaml.YAMLError as exc:
+                  print(f"{path}: front matter is not valid YAML ({str(exc).splitlines()[0]})"); bad += 1; continue
+              if not isinstance(data, dict):
+                  print(f"{path}: front matter is not a mapping"); bad += 1; continue
+              for e in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path)):
+                  where = "/" + "/".join(str(p) for p in e.absolute_path)
+                  print(f"{path}: {where}: {e.message}"); bad += 1
+          print(f"{len(files)} skill file(s), {bad} problem(s)")
+          sys.exit(1 if bad else 0)
+          PY

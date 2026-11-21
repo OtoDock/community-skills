@@ -1,21 +1,22 @@
 # OtoDock Community Skills
 
-The catalog of **Agent Skills** ([agentskills.io](https://agentskills.io) —
-`SKILL.md` folders) that an [OtoDock](https://github.com/OtoDock) instance can
-install with one click. A skill teaches agents *how* to do something —
-distinctive frontend design, threat modeling a repo, styling a slide deck —
-as instruction and reference content the agent loads on demand when a task
-matches.
+The catalog of **Agent Skills** that an [OtoDock](https://github.com/OtoDock)
+instance can install with one click. An Agent Skill is a `SKILL.md` folder, as
+[agentskills.io](https://agentskills.io) defines it. A skill teaches agents
+*how* to do something, such as distinctive frontend design, threat modeling a
+repo or styling a slide deck. It is instruction and reference content, and the
+agent loads it on demand when a task matches.
 
 This repo is the **source of truth** for what the OtoDock platform offers in
 Agent Settings → Skills → Browse Community Skills. Operators don't clone it
-directly — the platform pulls `registry.json` from this repo's `main` branch
+directly. The platform pulls `registry.json` from this repo's `main` branch
 and downloads individual skill packages on demand.
 
-Skills complement [community MCPs](https://github.com/OtoDock/community-mcps):
-an MCP gives agents new *tools*; a skill gives them new *technique*. A skill
-package is context-only — no server process, no code execution, nothing
-installed on remote machines beyond markdown and reference files.
+Skills complement [community MCPs](https://github.com/OtoDock/community-mcps).
+An MCP gives agents new *tools*, and a skill gives them new *technique*. A
+skill package is context-only. It has no server process and no code
+execution. It installs nothing on remote machines beyond markdown and
+reference files.
 
 ## What's in here
 
@@ -38,9 +39,9 @@ installed on remote machines beyond markdown and reference files.
 
 ## The seed set
 
-Curated from the official Anthropic and OpenAI skills repositories — vendored
-at a pinned upstream commit, each package's README records the exact source,
-commit, license, and any modifications.
+Curated from the official Anthropic and OpenAI skills repositories. Each
+package is vendored at a pinned upstream commit. Its README records the exact
+source, commit, license, and any modifications.
 
 <!-- catalog:start -->
 | Package | Version | From | What it teaches |
@@ -54,18 +55,24 @@ commit, license, and any modifications.
 | [theme-factory](./theme-factory/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Ten professional color-and-font themes, plus on-the-fly theme generation, for styling slides, documents,… |
 <!-- catalog:end -->
 
-## Content policy (v1)
+## Content policy
 
-Community skill packages carry **instruction and reference content only** —
-markdown, plus inert assets (templates, fonts, PDFs). No `scripts/`
-directories, no executable payloads, no `.env` files. The platform's
-installer rejects violations; `scripts/generate-registry.py` enforces the
-same rules in CI so a package that lands here always installs cleanly.
-`SKILL.md` frontmatter is scrubbed to a declarative whitelist at install —
-keys like `allowed-tools` never reach an agent session.
+A skill package carries instructions and reference content: markdown, plus
+inert assets (templates, fonts, PDFs). It may also carry a `scripts/`
+folder, as the Agent Skills standard allows. A skill's scripts run through
+the agent's normal shell tool, under the platform's permission tiers. They
+are reviewed before they land here, and the registry flags such a package
+(`has_scripts`), so the platform shows that it bundles scripts.
+
+No package carries `.env` files, keys or credentials.
+`scripts/generate-registry.py` checks that in CI.
+[CONTRIBUTING.md](CONTRIBUTING.md) has the full policy.
+
+`SKILL.md` frontmatter is scrubbed to a declarative whitelist at install.
+Keys like `allowed-tools` never reach an agent session.
 
 ## License
 
 Repository tooling and metadata: [Apache-2.0](LICENSE). Each vendored skill
-keeps its own upstream license file inside its skill folder (all current
-packages: Apache-2.0), with attribution in the package README.
+keeps its own upstream license file inside its skill folder, with attribution
+in the package README. All current packages are Apache-2.0.
