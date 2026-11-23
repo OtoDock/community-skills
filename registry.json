@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-11-23T01:04:47Z",
+  "updated_at": "2026-11-23T01:06:10Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -175,13 +175,13 @@
     {
       "name": "security-threat-model",
       "label": "Security Threat Model",
-      "description": "Repository-grounded threat modeling — trust boundaries, assets, attacker capabilities, abuse paths, and mitigations — written up as a concise Markdown threat model.",
+      "description": "Repository-grounded threat modeling: trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, written up as a concise Markdown threat model.",
       "category": "skill",
       "version": "1.0.0",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
-      "manifest_hash": "cd9a3a8ca3e5dbb4",
+      "manifest_hash": "adc5778de98e02ed",
       "manifest_url": "./security-threat-model/manifest.json",
       "readme_url": "./security-threat-model/README.md",
       "icon_url": null,
@@ -201,7 +201,7 @@
       "has_scripts": false,
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
-      "size_bytes": 33401,
+      "size_bytes": 33404,
       "deprecated": false,
       "patched": false,
       "patch_note": null

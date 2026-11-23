@@ -1,7 +1,7 @@
 {
   "name": "security-threat-model",
   "label": "Security Threat Model",
-  "description": "Repository-grounded threat modeling — trust boundaries, assets, attacker capabilities, abuse paths, and mitigations — written up as a concise Markdown threat model.",
+  "description": "Repository-grounded threat modeling: trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, written up as a concise Markdown threat model.",
   "version": "1.0.0",
   "category": "skill",
   "author": "OpenAI",

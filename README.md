@@ -51,7 +51,7 @@ source, commit, license, and any modifications.
 | [frontend-design](./frontend-design/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Distinctive, intentional visual design guidance for building or reshaping web UIs: aesthetic direction,… |
 | [internal-comms](./internal-comms/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Formats and worked examples for internal communications: status reports, leadership updates, 3P updates,… |
 | [security-best-practices](./security-best-practices/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Language- and framework-specific security best-practice reviews and secure-by-default coding guidance for… |
-| [security-threat-model](./security-threat-model/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Repository-grounded threat modeling — trust boundaries, assets, attacker capabilities, abuse paths, and… |
+| [security-threat-model](./security-threat-model/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Repository-grounded threat modeling: trust boundaries, assets, attacker capabilities, abuse paths, and… |
 | [theme-factory](./theme-factory/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Ten professional color-and-font themes, plus on-the-fly theme generation, for styling slides, documents,… |
 <!-- catalog:end -->
 
