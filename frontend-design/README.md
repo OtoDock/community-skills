@@ -1,11 +1,11 @@
 # Frontend Design
 
-**Agent Skill package** — instruction/reference content only, no server, no
+**Agent Skill package**: instruction/reference content only, no server, no
 code execution. Installs the `frontend-design` skill
 ([Agent Skills](https://agentskills.io) format), which agents load on demand
 when a task matches its description.
 
-Turns an agent into an opinionated design lead: instead of the safe, templated defaults LLM-built pages tend toward, it pushes for a deliberate aesthetic point of view — grounded in the subject matter, with real typography and palette decisions and one justified aesthetic risk per brief.
+Turns an agent into an opinionated design lead. LLM-built pages tend toward safe, templated defaults. Instead, it pushes for a deliberate aesthetic point of view, grounded in the subject matter. It brings real typography and palette decisions, and one justified aesthetic risk per brief.
 
 Pairs well with OtoDock's interactive artifacts and mini-apps: enable it for agents that build dashboards, landing pages, or `display_ui` artifacts.
 
@@ -21,5 +21,5 @@ One skill, loaded `on_demand`:
 
 Vendored from [anthropics/skills](https://github.com/anthropics/skills) at commit
 [`3b3fad9`](https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/frontend-design), path `skills/frontend-design`. © Anthropic,
-licensed under Apache-2.0 — see `skills/frontend-design/LICENSE.txt`.
+licensed under Apache-2.0 (see `skills/frontend-design/LICENSE.txt`).
 Modifications: none.

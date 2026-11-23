@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-11-23T01:03:03Z",
+  "updated_at": "2026-11-23T01:04:47Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -73,13 +73,13 @@
     {
       "name": "frontend-design",
       "label": "Frontend Design",
-      "description": "Distinctive, intentional visual design guidance for building or reshaping web UIs — aesthetic direction, typography, palette, and layout choices that don't read as templated defaults.",
+      "description": "Distinctive, intentional visual design guidance for building or reshaping web UIs: aesthetic direction, typography, palette, and layout choices that don't read as templated defaults.",
       "category": "skill",
       "version": "1.0.0",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
-      "manifest_hash": "85fa0a6e3ce8f076",
+      "manifest_hash": "6f2c5854c4b8a704",
       "manifest_url": "./frontend-design/manifest.json",
       "readme_url": "./frontend-design/README.md",
       "icon_url": null,
@@ -99,7 +99,7 @@
       "has_scripts": false,
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
-      "size_bytes": 20922,
+      "size_bytes": 20911,
       "deprecated": false,
       "patched": false,
       "patch_note": null
