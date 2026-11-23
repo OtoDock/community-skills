@@ -1,18 +1,18 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-11-23T00:59:55Z",
+  "updated_at": "2026-11-23T01:01:18Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
       "name": "algorithmic-art",
       "label": "Algorithmic Art",
-      "description": "Generative art with p5.js — seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
+      "description": "Generative art with p5.js: seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
       "category": "skill",
       "version": "1.0.2",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
-      "manifest_hash": "445748fca2672938",
+      "manifest_hash": "560fe69367499740",
       "manifest_url": "./algorithmic-art/manifest.json",
       "readme_url": "./algorithmic-art/README.md",
       "icon_url": null,

@@ -1,7 +1,7 @@
 {
   "name": "algorithmic-art",
   "label": "Algorithmic Art",
-  "description": "Generative art with p5.js — seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
+  "description": "Generative art with p5.js: seeded randomness, flow fields, particle systems, and interactive parameter exploration, driven by a written algorithmic philosophy.",
   "version": "1.0.2",
   "category": "skill",
   "author": "Anthropic",
