@@ -1,7 +1,7 @@
 {
   "name": "claude-api",
   "label": "Claude API",
-  "description": "Comprehensive reference for building on the Claude API and Anthropic SDKs — model ids, pricing, streaming, tool use, MCP, agents, and caching — across Python, TypeScript, Java, Go, C#, PHP, Ruby, and curl.",
+  "description": "Comprehensive reference for building on the Claude API and Anthropic SDKs: model ids, pricing, streaming, tool use, MCP, agents, and caching. It covers Python, TypeScript, Java, Go, C#, PHP, Ruby, and curl.",
   "version": "1.0.1",
   "category": "skill",
   "author": "Anthropic",

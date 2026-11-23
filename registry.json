@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-11-23T01:01:18Z",
+  "updated_at": "2026-11-23T01:03:03Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -40,13 +40,13 @@
     {
       "name": "claude-api",
       "label": "Claude API",
-      "description": "Comprehensive reference for building on the Claude API and Anthropic SDKs — model ids, pricing, streaming, tool use, MCP, agents, and caching — across Python, TypeScript, Java, Go, C#, PHP, Ruby, and curl.",
+      "description": "Comprehensive reference for building on the Claude API and Anthropic SDKs: model ids, pricing, streaming, tool use, MCP, agents, and caching. It covers Python, TypeScript, Java, Go, C#, PHP, Ruby, and curl.",
       "category": "skill",
       "version": "1.0.1",
       "runtime": "none",
       "source": "",
       "version_constraint": "",
-      "manifest_hash": "cc3a7d098c96d0d4",
+      "manifest_hash": "c5c4c1b9547cbe7b",
       "manifest_url": "./claude-api/manifest.json",
       "readme_url": "./claude-api/README.md",
       "icon_url": null,
@@ -65,7 +65,7 @@
       "has_scripts": false,
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
-      "size_bytes": 975988,
+      "size_bytes": 975990,
       "deprecated": false,
       "patched": false,
       "patch_note": null

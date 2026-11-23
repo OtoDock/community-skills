@@ -47,7 +47,7 @@ source, commit, license, and any modifications.
 | Package | Version | From | What it teaches |
 |---------|---------|------|-----------------|
 | [algorithmic-art](./algorithmic-art/) | 1.0.2 | [Anthropic](https://github.com/anthropics/skills) | Generative art with p5.js: seeded randomness, flow fields, particle systems, and interactive parameter… |
-| [claude-api](./claude-api/) | 1.0.1 | [Anthropic](https://github.com/anthropics/skills) | Comprehensive reference for building on the Claude API and Anthropic SDKs — model ids, pricing, streaming,… |
+| [claude-api](./claude-api/) | 1.0.1 | [Anthropic](https://github.com/anthropics/skills) | Comprehensive reference for building on the Claude API and Anthropic SDKs: model ids, pricing, streaming,… |
 | [frontend-design](./frontend-design/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Distinctive, intentional visual design guidance for building or reshaping web UIs — aesthetic direction,… |
 | [internal-comms](./internal-comms/) | 1.0.0 | [Anthropic](https://github.com/anthropics/skills) | Formats and worked examples for internal communications: status reports, leadership updates, 3P updates,… |
 | [security-best-practices](./security-best-practices/) | 1.0.0 | [OpenAI](https://github.com/openai/skills) | Language- and framework-specific security best-practice reviews and secure-by-default coding guidance for… |
