@@ -1,6 +1,6 @@
 {
   "registry_version": "1",
-  "updated_at": "2026-11-23T00:56:08Z",
+  "updated_at": "2026-11-23T00:58:11Z",
   "platform_min_version": "1.2.0",
   "skills": [
     {
@@ -167,7 +167,7 @@
       "has_scripts": false,
       "platform_min_version": "1.2.0",
       "assignment_mode": "auto",
-      "size_bytes": 414158,
+      "size_bytes": 414174,
       "deprecated": false,
       "patched": false,
       "patch_note": null
