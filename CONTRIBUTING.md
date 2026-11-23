@@ -21,6 +21,19 @@ CI runs `scripts/generate-registry.py --check`. The validation is the same
 the OtoDock platform's installer enforces, so a package that passes here
 always installs cleanly.
 
+CI also runs the writing check, the job `prose`. It reads the files that
+`.prose.json` lists: every README and the descriptions a person sees. The
+rules are in
+[WRITING.md](https://github.com/OtoDock/oto-dock/blob/main/WRITING.md) of
+OtoDock/oto-dock. To run it before you push:
+
+```bash
+base=https://raw.githubusercontent.com/OtoDock/oto-dock/main/scripts/prose
+curl -fsSL --create-dirs -o /tmp/prose/prose_check.py "$base/prose_check.py"
+curl -fsSL -o /tmp/prose/rules.json "$base/rules.json"
+python3 /tmp/prose/prose_check.py . --no-nested
+```
+
 ## File layout: one folder per skill package
 
 ```
